@@ -22,6 +22,7 @@ public class BaseTest {
 
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "192.168.56.101:5555");
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+        capabilities.setCapability(MobileCapabilityType.CLEAR_SYSTEM_FILES, "");
         driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         return driver;
     }
